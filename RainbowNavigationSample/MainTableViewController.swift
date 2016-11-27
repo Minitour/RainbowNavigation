@@ -40,9 +40,9 @@ class MainTableViewController: UITableViewController, RainbowColorSource {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath as IndexPath)
 
-        switch (indexPath as NSIndexPath).row {
+        switch indexPath.row {
         case 0:
             cell.textLabel?.text = "Color"
         case 1:
@@ -55,7 +55,7 @@ class MainTableViewController: UITableViewController, RainbowColorSource {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch (indexPath as NSIndexPath).row {
+        switch indexPath.row {
         case 0:
             performSegue(withIdentifier: "PushColorVC", sender: self)
         case 1:

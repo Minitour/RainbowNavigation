@@ -37,7 +37,7 @@ class TransparentTableViewController: UITableViewController, RainbowColorSource 
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath as IndexPath)
         cell.textLabel?.text = "Cell"
         
         return cell
